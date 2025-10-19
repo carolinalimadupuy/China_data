@@ -1,0 +1,57 @@
+---
+title: "ENTREGA 2°_CAROLINA LIMA DUPUY_20213002."
+author: "CAROLINA LIMA DUPUY"
+date: "2025-10-19"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(rio)
+library(janitor)
+```
+
+```{r}
+data <- import("China_data.xlsx")
+```
+
+```{r}
+str(data)
+```
+```{r}
+# Estandarizar nombres de columnas
+data <- clean_names(data)
+
+# Eliminar filas con valores vacíos
+data <- data %>% drop_na()
+
+# Convertir tipos de variables según su naturaleza
+data <- data %>%
+  mutate(
+    country = as.factor(country),
+    region = as.factor(region),
+    bri = as.factor(bri),
+    # Convertir columnas que están en texto a numéricas
+    usadf = as.numeric(usadf),
+    idi_2024 = as.numeric(idi_2024)
+  )
+```
+
+```{r}
+str(data)
+```
+```{r}
+# Verificar si alguna conversión generó NAs inesperados
+sapply(data, function(x) sum(is.na(x)))
+```
+```{r}
+export(data, "China_data_limpia.xlsx")
+```
+
+```{r}
+summary(data)
+```
+```{r}
+list.files()
+```
+
