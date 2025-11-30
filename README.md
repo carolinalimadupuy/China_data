@@ -1,4 +1,4 @@
-# Entregable Nº2  
+# TRABAJO DE ESTADÍSTICA   
 **Curso:** Estadística para el Análisis Político 2°  
 **Clave:** POL304  
 **Horario:** 0689  
@@ -15,10 +15,12 @@
 ## Contenido del repositorio:
 
 China_data/
-├── China_data.xlsx # Base original
-├── China_data_limpia.xlsx # Base limpia (resultado de la limpieza en R)
-├── ENTREGA_2_CAROLINA_LIMA_DUPUY_20213002.Rmd # Proceso de limpieza
-└── README.md # Documentación del proyecto
+├── China_data.xlsx                   # Base original
+├── China_data_limpia.xlsx            # Base limpia
+├── ENTREGA_2_CAROLINA_LIMA_DUPUY_20213002.Rmd  # Proceso de limpieza
+├── dashboard.Rmd                     # RMD del dashboard
+├── dashboard.html                    # HTML generado del dashboard
+└── README.md                         # Documentación del proyecto
 
 ---
 
